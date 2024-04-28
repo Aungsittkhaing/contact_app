@@ -33,7 +33,7 @@ const RegisterPage = () => {
   const handleInputChange = (e) => {
     setFormData((pre) => ({ ...pre, [e.target.name]: e.target.value }));
   };
-  //form subit
+  //form submit
   const handleSubmit = async (e) => {
     e.preventDefault();
     // const res = await Register(formData);

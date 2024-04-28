@@ -20,3 +20,11 @@ export const Login = async(loginData) => {
         return {error : true, msg : error.message};
     }
 }
+export const getProfile = async() => {
+    try {
+        const res = await api.get("/user-profile");
+        return res;
+    } catch (error) {
+        return {error : true, msg : error.message};
+    }
+}
