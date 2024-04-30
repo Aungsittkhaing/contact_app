@@ -23,7 +23,7 @@ const HomePage = () => {
     <PreventComponent fail={"/"} check={!localStorage.getItem("auth")}>
       <div className="container mx-auto h-screen">
         <div className="w-[80%] mx-auto h-full">
-          <nav className="flex justify-between items-center px-2 py-3 shadow">
+          <nav className="flex justify-between items-center px-2 py-3 shadow sticky top-0">
             <h1>Home Contact</h1>
 
             <div className="">

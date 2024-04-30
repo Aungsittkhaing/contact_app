@@ -33,3 +33,26 @@ export const singleGetContact = async(id) => {
         return {error : true, msg : error.message};
     }
 }
+export const editContact = async(id, editData) => {
+    try{
+        const res = await api.put(`/contact/${id}`, editData);
+        console.log(res);
+        if(res.data){
+            return true;
+        }
+    }catch(error){
+        return {error : true, msg : error.message};
+
+    }
+}
+export const deleteContact = async(id) => {
+    try{
+        const res = await api.delete(`/contact/${id}`);
+        console.log(res);
+        if(res.data){
+            return true;
+        }
+    }catch(error){
+        return {error : true, msg : error.message};
+    }
+}
